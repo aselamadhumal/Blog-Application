@@ -5,6 +5,8 @@ import { errorHandler } from '../utils/error.js';
 export const signup = async (req, res,next) => {
     const { username, email, password} = req.body;
 
+    console.log(username, email, password);
+
    if (!username || !email || !password || username === '' || email === '' || password === '') {
        
         next(errorHandler(400, 'Please fill all fields'));
