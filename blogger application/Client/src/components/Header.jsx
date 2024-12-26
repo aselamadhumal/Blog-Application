@@ -1,4 +1,4 @@
-import { Button, Navbar, TextInput } from "flowbite-react";
+import {   Button, Navbar, TextInput } from "flowbite-react";
 import { Link, useLocation } from "react-router-dom";
 import { AiOutlineSearch} from 'react-icons/ai';
 
@@ -18,6 +18,7 @@ export default function Header() {
         </Link>
 
         <form>
+
         <TextInput 
           type='text'
           placeholder='Search...'
