@@ -8,7 +8,7 @@ export const signup = async (req, res,next) => {
     console.log(username, email, password);
 
    if (!username || !email || !password || username === '' || email === '' || password === '') {
-       
+       //using errorHandler
         next(errorHandler(400, 'Please fill all fields'));
    }
 
@@ -23,7 +23,7 @@ export const signup = async (req, res,next) => {
    
    try{
     await newUser.save();
-    res.json('Signup successfull');
+    res.json('Signup successful');
    }
    catch(error){
        next(error);
